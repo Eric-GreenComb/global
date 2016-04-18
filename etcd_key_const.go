@@ -19,7 +19,7 @@ const (
 
 // command/query
 const (
-	ETCD_KEY_MICROS_COMMAND_TOKEN = "banerwai/micros/command/token/addr"
-	ETCD_KEY_MICROS_COMMAND_AUTH  = "banerwai/micros/command/auth/addr"
-	// ETCD_KEY_MICROS_COMMAND_RENDER  = "/banerwai/micros/query/render/addr"
+	ETCD_KEY_MICROS_COMMAND_TOKEN   = "banerwai/micros/command/token/addr"
+	ETCD_KEY_MICROS_COMMAND_AUTH    = "banerwai/micros/command/auth/addr"
+	ETCD_KEY_MICROS_COMMAND_PROFILE = "banerwai/micros/command/profile/addr"
 )
