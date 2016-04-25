@@ -16,8 +16,9 @@ const (
 	ETCD_KEY_MICROS_QUERY_PROFILE  = "banerwai/micros/query/profile/addr"
 	ETCD_KEY_MICROS_QUERY_RENDER   = "banerwai/micros/query/render/addr"
 
-	ETCD_KEY_MICROS_QUERY_AUTH = "banerwai/micros/query/auth/addr"
-	ETCD_KEY_MICROS_QUERY_USER = "banerwai/micros/query/user/addr"
+	ETCD_KEY_MICROS_QUERY_AUTH  = "banerwai/micros/query/auth/addr"
+	ETCD_KEY_MICROS_QUERY_USER  = "banerwai/micros/query/user/addr"
+	ETCD_KEY_MICROS_QUERY_TOKEN = "banerwai/micros/query/token/addr"
 )
 
 // command/query
