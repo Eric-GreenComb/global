@@ -1,2 +1,2 @@
 # global
-globa lconst
+global const
