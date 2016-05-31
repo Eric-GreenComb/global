@@ -6,12 +6,12 @@ import (
 
 type Resume struct {
 	Id        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	UserID    bson.ObjectId `bson:"user_id" json:"user_id"`
+	UserID    bson.ObjectId `bson:"userid" json:"userid"`
 	AuthEmail string        `bson:"auth_email" json:"auth_email"`
 	Phone     string        `bson:"phone" json:"phone"`
 
 	SkillExperiences    []SkillExperience   `bson:"experience_levels" json:"experience_levels"`
-	ToolandArchs        []ToolandArch       `bson:"experience_levels" json:"experience_levels"`
+	ToolandArchs        []ToolandArch       `bson:"tool_archs" json:"tool_archs"`
 	Portfolioes         []Portfolio         `bson:"portfolioes" json:"portfolioes"`
 	EmploymentHistories []EmploymentHistory `bson:"employment_histories" json:"employment_histories"`
 	Educations          []Education         `bson:"educations" json:"educations"`

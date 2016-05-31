@@ -11,3 +11,9 @@ type Email struct {
 	Body     string `json:"body"`
 	Mailtype string `json:"type"`
 }
+
+type EmailExtra struct {
+	Email    Email             `json:"email"`
+	TempName string            `json:"tempname"`
+	Parse    map[string]string `json:"parse"`
+}

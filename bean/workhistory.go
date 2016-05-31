@@ -25,5 +25,5 @@ type WorkHistoryAndFeedback struct {
 type WorkFeedback struct {
 	WorkRate int    `bson:"workrate" json:"workrate"`
 	Feedback string `bson:"feedback" json:"feedback"`
-	writeby  string `bson:"writeby" json:"writeby"`
+	Writeby  string `bson:"writeby" json:"writeby"`
 }

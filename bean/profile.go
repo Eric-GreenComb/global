@@ -24,23 +24,24 @@ type Profile struct {
 	Name              string         `bson:"freelancer_name" json:"freelancer_name"`
 	JobTitle          string         `bson:"job_title" json:"job_title"`
 	Overview          string         `bson:"overview" json:"overview"` // searchkey
-	HourRate          float64        `bson:"hour_rate" json:"hour_rate"`
+	HourRate          int            `bson:"hour_rate" json:"hour_rate"`
 	WorkHours         int            `bson:"work_hours" json:"work_hours"`
 	PortfolioNums     int            `bson:"portfolio_nums" json:"portfolio_nums"`
 	SkillTags         string         `bson:"skill_tags" json:"skill_tags"`
 	AgencyHourlyRates string         `bson:"agency_hourly_rates" json:"agency_hourly_rates"`
 	AgencyMembers     []AgencyMember `bson:"agency_members" json:"agency_members"`
 
-	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
+	Status         bool      `bson:"status" json:"status"`
+	CreatedTime    time.Time `bson:"createdtime" json:"createdtime"`
+	LastActiveTime time.Time `bson:"last_activetime" json:"last_activetime"`
 }
 
 type AgencyMember struct {
-	ProfileIds bson.ObjectId `bson:"profile_id" json:"profile_id"`
-	Names      string        `bson:"profile_name" json:"profile_name"`
-	JobTitles  string        `bson:"profile_jobtitle" json:"profile_jobtitle"`
-	Manager    bool          `bson:"manager" json:"manager"`
-	Email      string        `bson:"email" json:"email"`
-	Phone      string        `bson:"phone" json:"phone"`
+	Names     string `bson:"profile_name" json:"profile_name"`
+	JobTitles string `bson:"profile_jobtitle" json:"profile_jobtitle"`
+	Manager   bool   `bson:"manager" json:"manager"`
+	Email     string `bson:"email" json:"email"`
+	Phone     string `bson:"phone" json:"phone"`
 }
 
 type ProfileDto struct {

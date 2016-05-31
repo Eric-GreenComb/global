@@ -1,15 +1,28 @@
 package global
 
+/**
+section for config
+*/
 // Gearman
 const (
 	ETCD_KEY_GEARMAN_ADDR = "/banerwai/gearman/conn"
 )
 
-// Gearman
+// Redis
 const (
 	ETCD_KEY_REDIS_ADDR = "/banerwai/redis/conn"
 )
 
+// for set key
+const (
+	ETCD_KEY_TPL_EMAIL = "/banerwai/tpl/email/"
+	ETCD_KEY_TPL_SMS   = "/banerwai/tpl/sms/"
+	ETCD_KEY_TPL_WEB   = "/banerwai/tpl/web/"
+)
+
+/**
+section for service reg/discovery
+*/
 // micros/query
 const (
 	ETCD_KEY_MICROS_QUERY_CATEGORY = "banerwai/micros/query/category/addr" // port: 39010
