@@ -10,7 +10,9 @@ type Profile struct {
 	UserID bson.ObjectId `bson:"user_id" json:"user_id"`
 
 	// select key     -1 is all
-	Serialnumber    int `bson:"serial_number" json:"serial_number"`       // /global/bean/category.go Category/SubCategory Serialnumber
+	CategoryNumber int `bson:"category_number" json:"category_number"` // /global/bean/category.go Category/SubCategory Serialnumber
+	SerialNumber   int `bson:"serial_number" json:"serial_number"`     // /global/bean/category.go Category/SubCategory Serialnumber
+
 	HoursBilled     int `bson:"hours_billed" json:"hours_billed"`         // /global/business_const.go : Hours Billed
 	AvailableHours  int `bson:"available_hours" json:"available_hours"`   // /global/business_const.go : Available Hours
 	JobSuccess      int `bson:"job_success" json:"job_success"`           // /global/business_const.go : Job Success
