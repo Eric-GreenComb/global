@@ -4,7 +4,7 @@ import ()
 
 type ProfileSearchCondition struct {
 	// select key     -1 is all
-	Serialnumber   int `json:"serial_number"`   // /global/bean/category.go Category/SubCategory Serialnumber
+	SerialNumber   int `json:"serial_number"`   // /global/bean/category.go Category/SubCategory SerialNumber
 	HoursBilled    int `json:"hours_billed"`    // /gather/global/business_const.go : Hours Billed
 	AvailableHours int `json:"available_hours"` // /gather/global/business_const.go : Available Hours
 	JobSuccess     int `json:"job_success"`     // /gather/global/business_const.go : Job Success
