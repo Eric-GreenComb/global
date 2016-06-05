@@ -44,3 +44,7 @@ const (
 	Region_XiangGang = 81 //香港特别行政区
 	Region_AoMen     = 82 //澳门特别行政区
 )
+
+const (
+	BANERWAI_INVITED_DEFAULT_USERID = "5707cb10ae6faa1d1071a189"
+)
