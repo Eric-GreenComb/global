@@ -18,6 +18,8 @@ const (
 	ETCD_KEY_TPL_EMAIL = "/banerwai/tpl/email/"
 	ETCD_KEY_TPL_SMS   = "/banerwai/tpl/sms/"
 	ETCD_KEY_TPL_WEB   = "/banerwai/tpl/web/"
+
+	ETCD_KEY_JSON_CATEGORY = "/banerwai/json/category/"
 )
 
 /**
