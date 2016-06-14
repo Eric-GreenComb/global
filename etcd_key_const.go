@@ -15,9 +15,10 @@ const (
 
 // for set key
 const (
-	ETCD_KEY_TPL_EMAIL = "/banerwai/tpl/email/"
-	ETCD_KEY_TPL_SMS   = "/banerwai/tpl/sms/"
-	ETCD_KEY_TPL_WEB   = "/banerwai/tpl/web/"
+	ETCD_KEY_TPL_EMAIL   = "/banerwai/tpl/email/"
+	ETCD_KEY_TPL_SMS     = "/banerwai/tpl/sms/"
+	ETCD_KEY_TPL_WEB     = "/banerwai/tpl/web/"
+	ETCD_KEY_TPL_CONTACT = "/banerwai/tpl/contact/"
 
 	ETCD_KEY_JSON_CATEGORY = "/banerwai/json/category/"
 )
@@ -38,9 +39,12 @@ const (
 
 	ETCD_KEY_MICROS_QUERY_PROFILE     = "banerwai/micros/query/profile/addr"     // port: 39050
 	ETCD_KEY_MICROS_QUERY_WORKHISTORY = "banerwai/micros/query/workhistory/addr" // port: 39080
+
+	ETCD_KEY_MICROS_QUERY_CONTACT = "banerwai/micros/query/contact/addr" // port: 39090
+	ETCD_KEY_MICROS_QUERY_PAYMENT = "banerwai/micros/query/payment/addr" // port: 39100
 )
 
-// command/query
+// micros/command
 const (
 	ETCD_KEY_MICROS_COMMAND_CATEGORY = "banerwai/micros/command/category/addr" // port: 36010
 	ETCD_KEY_MICROS_COMMAND_RENDER   = "banerwai/micros/command/render/addr"   // port: 36030
@@ -53,4 +57,7 @@ const (
 
 	ETCD_KEY_MICROS_COMMAND_PROFILE     = "banerwai/micros/command/profile/addr"     // port: 36050
 	ETCD_KEY_MICROS_COMMAND_WORKHISTORY = "banerwai/micros/command/workhistory/addr" // port: 36080
+
+	ETCD_KEY_MICROS_COMMAND_CONTACT = "banerwai/micros/command/contact/addr" // port: 36090
+	ETCD_KEY_MICROS_COMMAND_PAYMENT = "banerwai/micros/command/payment/addr" // port: 36100
 )
