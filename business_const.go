@@ -62,3 +62,11 @@ const (
 	JobSuccess_80 = iota // 0
 	JobSuccess_90
 )
+
+// Contact Sign Enum
+const (
+	ContactSign_Null = iota // 0
+	ContactSign_Client
+	ContactSign_Freelancer
+	ContactSign_Dealed
+)
