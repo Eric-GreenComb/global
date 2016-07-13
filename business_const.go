@@ -70,3 +70,9 @@ const (
 	ContactSign_Freelancer
 	ContactSign_Dealed
 )
+
+// Account payment type
+const (
+	PayType_BankRemittance = iota // 银行汇款 Fee : 0%
+	PayType_WechatPay             // Fee : 0.7%
+)
