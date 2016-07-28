@@ -41,7 +41,7 @@ const (
 	ETCD_KEY_MICROS_QUERY_WORKHISTORY = "banerwai/micros/query/workhistory/addr" // port: 39080
 
 	ETCD_KEY_MICROS_QUERY_CONTACT = "banerwai/micros/query/contact/addr" // port: 39090
-	ETCD_KEY_MICROS_QUERY_PAYMENT = "banerwai/micros/query/payment/addr" // port: 39100
+	ETCD_KEY_MICROS_QUERY_ACCOUNT = "banerwai/micros/query/account/addr" // port: 39100
 )
 
 // micros/command
@@ -59,5 +59,5 @@ const (
 	ETCD_KEY_MICROS_COMMAND_WORKHISTORY = "banerwai/micros/command/workhistory/addr" // port: 36080
 
 	ETCD_KEY_MICROS_COMMAND_CONTACT = "banerwai/micros/command/contact/addr" // port: 36090
-	ETCD_KEY_MICROS_COMMAND_PAYMENT = "banerwai/micros/command/payment/addr" // port: 36100
+	ETCD_KEY_MICROS_COMMAND_ACCOUNT = "banerwai/micros/command/account/addr" // port: 36100
 )

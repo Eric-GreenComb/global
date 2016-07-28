@@ -76,3 +76,22 @@ const (
 	PayType_BankRemittance = iota // 银行汇款 Fee : 0%
 	PayType_WechatPay             // Fee : 0.7%
 )
+
+// Account billing status
+const (
+	BillingStatus_Create = iota // 0
+	BillingStatus_Deal
+	BillingStatus_Cancel
+)
+
+// Currency Enum
+// HKD港币、KRW韩元、CHF瑞郎、SGD新加坡元、MYR马来西亚币、IDR印尼、NZD新西兰、VND越南、THB泰铢、PHP菲律宾
+const (
+	CURRENCY_CNY = "CNY" // 人民币
+	CURRENCY_USD = "USD" // 美元
+	CURRENCY_EUR = "EUR" // 欧元
+	CURRENCY_GBP = "GBP" // 英镑
+	CURRENCY_JPY = "JPY" // 日元
+	CURRENCY_CAD = "CAD" // 加元
+	CURRENCY_AUD = "AUD" // 澳元
+)

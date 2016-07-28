@@ -10,10 +10,14 @@ type Account struct {
 	UserId bson.ObjectId `bson:"user_id" json:"user_id"`
 	Email  string        `bson:"email" json:"email"`
 
-	Currency string `bson:"currency" json:"currency"`
-	Amount   int64  `bson:"amount" json:"amount"`
+	MultiCurrency []MultiCurrencyAccount `bson:"multi_curreency" json:"multi_curreency"`
 
 	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
+}
+
+type MultiCurrencyAccount struct {
+	Currency string `bson:"currency" json:"currency"`
+	Amount   int64  `bson:"amount" json:"amount"`
 }
 
 type Billing struct {
@@ -28,5 +32,6 @@ type Billing struct {
 	PayFee    int    `bson:"payfee" json:"payfee"`
 	RealCosts int    `bson:"real_costs" json:"real_costs"`
 
+	Status      int       `bson:"status" json:"status"`
 	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
 }
