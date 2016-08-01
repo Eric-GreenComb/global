@@ -74,7 +74,7 @@ const (
 // Account payment type
 const (
 	PayType_BankRemittance = iota // 银行汇款 Fee : 0%
-	PayType_WechatPay             // Fee : 0.7%
+	PayType_WechatPay             // 微信支付 Fee : 0.7%
 )
 
 // Account billing status
@@ -82,6 +82,20 @@ const (
 	BillingStatus_Create = iota // 0
 	BillingStatus_Deal
 	BillingStatus_Cancel
+)
+
+// Account billing CostType
+const (
+	BillingCostType_Payment = iota // 0
+	BillingCostType_PaymentFee
+	BillingCostType_Platform
+)
+
+// Account billing memo
+const (
+	BillingMemo_Payment     = "Pay the costs"
+	BillingMemo_PaymentFee  = "Transaction costs"
+	BillingMemo_PlatformFee = "Platform services costs"
 )
 
 // Currency Enum
