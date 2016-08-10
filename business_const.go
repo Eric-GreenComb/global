@@ -71,12 +71,6 @@ const (
 	ContactSign_Dealed
 )
 
-// Account payment type
-const (
-	PayType_BankRemittance = iota // 银行汇款 Fee : 0%
-	PayType_WechatPay             // 微信支付 Fee : 0.7%
-)
-
 // Account billing status
 const (
 	BillingStatus_Create = iota // 0
@@ -86,16 +80,25 @@ const (
 
 // Account billing CostType
 const (
-	BillingCostType_Payment = iota // 0
-	BillingCostType_PaymentFee
-	BillingCostType_Platform
+	BillingCostType_PlatformFee = iota // 0 平台服务费 +
+	BillingCostType_Recharge           // 甲方充值到平台甲方账户 +
+	BillingCostType_RechargeFee        // 甲方充值手续费 -
+	BillingCostType_A_Transfer         // 甲方账户向乙方账户转账，扣除平台服务费 -
+	BillingCostType_B_Transfer         // 乙方账户接受甲方转账 +
+	BillingCostType_Cash               // 甲,乙方提现 -
+	BillingCostType_CashFee            // 提现支付手续费 -
 )
 
-// Account billing memo
+// Account billing payment type
 const (
-	BillingMemo_Payment     = "Pay the costs"
-	BillingMemo_PaymentFee  = "Transaction costs"
-	BillingMemo_PlatformFee = "Platform services costs"
+	PayType_BankRemittance = 0 // 银行汇款 Fee : 0%
+	PayType_WechatPay      = 7 // 微信支付 Fee : 0.7%
+)
+
+// 平台服务费率：10%，同一商家如果交易额超过10000元，费率为5%
+const (
+	PlatformFeeRate_10 = 10
+	PlatformFeeRate_5  = 5
 )
 
 // Currency Enum
