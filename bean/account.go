@@ -21,10 +21,11 @@ type MultiCurrencyAccount struct {
 }
 
 type Billing struct {
-	Id        bson.ObjectId `form:"id" bson:"_id,omitempty" json:"_id"`
+	Id        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
 	UserId    bson.ObjectId `form:"user_id" bson:"user_id" json:"user_id"`
 	PayUserId bson.ObjectId `form:"pay_user_id" bson:"pay_user_id" json:"pay_user_id"`
 	ServiceId bson.ObjectId `form:"service_id" bson:"service_id" json:"service_id"`
+	LinkId    bson.ObjectId `form:"link_id" bson:"link_id" json:"link_id"`
 	CostType  int           `form:"cost_type" bson:"cost_type" json:"cost_type"`
 	Memo      string        `form:"memo" bson:"memo" json:"memo"`
 
