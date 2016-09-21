@@ -2,11 +2,7 @@ package bean
 
 import ()
 
-// Attributes:
-//  - ID
-//  - Name
-//  - Desc
-//  - Subcategories
+// Category profile category
 type Category struct {
 	ID            string        `json:"id"`
 	SerialNumber  int32         `json:"serialnumber"`
@@ -17,10 +13,7 @@ type Category struct {
 	Subcategories []SubCategory `json:"subcategories"`
 }
 
-// Attributes:
-//  - ID
-//  - Name
-//  - Desc
+// SubCategory profile subcategory
 type SubCategory struct {
 	ID           string `json:"id"`
 	SerialNumber int32  `json:"serialnumber"`

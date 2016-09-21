@@ -5,9 +5,10 @@ import (
 	"time"
 )
 
+// Account account struct
 type Account struct {
-	Id     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	UserId bson.ObjectId `form:"user_id" bson:"user_id" json:"user_id"`
+	ID     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	UserID bson.ObjectId `form:"user_id" bson:"user_id" json:"user_id"`
 	Email  string        `form:"email" bson:"email" json:"email"`
 
 	MultiCurrency []MultiCurrencyAccount `bson:"multi_curreency" json:"multi_curreency"`
@@ -15,17 +16,19 @@ type Account struct {
 	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
 }
 
+// MultiCurrencyAccount multi currency of account
 type MultiCurrencyAccount struct {
 	Currency string `bson:"currency" json:"currency"`
 	Amount   int64  `bson:"amount" json:"amount"`
 }
 
+// Billing user account billing
 type Billing struct {
-	Id        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	UserId    bson.ObjectId `form:"user_id" bson:"user_id" json:"user_id"`
-	PayUserId bson.ObjectId `form:"pay_user_id" bson:"pay_user_id" json:"pay_user_id"`
-	ServiceId bson.ObjectId `form:"service_id" bson:"service_id" json:"service_id"`
-	LinkId    bson.ObjectId `form:"link_id" bson:"link_id" json:"link_id"`
+	ID        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	UserID    bson.ObjectId `form:"user_id" bson:"user_id" json:"user_id"`
+	PayUserID bson.ObjectId `form:"pay_user_id" bson:"pay_user_id" json:"pay_user_id"`
+	ServiceID bson.ObjectId `form:"service_id" bson:"service_id" json:"service_id"`
+	LinkID    bson.ObjectId `form:"link_id" bson:"link_id" json:"link_id"`
 	CostType  int           `form:"cost_type" bson:"cost_type" json:"cost_type"`
 	Memo      string        `form:"memo" bson:"memo" json:"memo"`
 

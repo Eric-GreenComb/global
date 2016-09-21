@@ -21,8 +21,9 @@ const (
 	UpdateEmailOverHours = 2.0
 )
 
+// Token token struct
 type Token struct {
-	Id          bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	ID          bson.ObjectId `bson:"_id,omitempty" json:"_id"`
 	Key         string        `bson:"key" json:"key"`
 	Token       string        `bson:"token" json:"token"`
 	Type        int64         `bson:"type" json:"type"`

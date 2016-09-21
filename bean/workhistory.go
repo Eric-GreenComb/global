@@ -4,13 +4,15 @@ import (
 	"labix.org/v2/mgo/bson"
 )
 
+// WorkHistory user work history on banerwai
 type WorkHistory struct {
-	Id        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	ID        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
 	ProfileID bson.ObjectId `bson:"profile_id" json:"profile_id"`
 
 	HistoryAndFeedbacks []WorkHistoryAndFeedback `bson:"history_feedbacks" json:"history_feedbacks"`
 }
 
+// WorkHistoryAndFeedback user work history / feedback
 type WorkHistoryAndFeedback struct {
 	Title      string `bson:"title" json:"title"`
 	WorkPeriod string `bson:"work_period" json:"work_period"`
@@ -22,6 +24,7 @@ type WorkHistoryAndFeedback struct {
 	WorkFeedbacks []WorkFeedback `bson:"work_feedbacks" json:"work_feedbacks"`
 }
 
+// WorkFeedback user work feedback
 type WorkFeedback struct {
 	WorkRate int    `bson:"workrate" json:"workrate"`
 	Feedback string `bson:"feedback" json:"feedback"`

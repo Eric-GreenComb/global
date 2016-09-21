@@ -5,8 +5,9 @@ import (
 	"time"
 )
 
+// Profile user profile
 type Profile struct {
-	Id     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	ID     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
 	UserID bson.ObjectId `bson:"user_id" json:"user_id"`
 
 	// select key     -1 is all
@@ -38,6 +39,7 @@ type Profile struct {
 	LastActiveTime time.Time `bson:"last_activetime" json:"last_activetime"`
 }
 
+// AgencyMember if user as a client ,client's member
 type AgencyMember struct {
 	Names     string `bson:"profile_name" json:"profile_name"`
 	JobTitles string `bson:"profile_jobtitle" json:"profile_jobtitle"`
@@ -46,8 +48,9 @@ type AgencyMember struct {
 	Phone     string `bson:"phone" json:"phone"`
 }
 
+// ProfileDto profile read struct
 type ProfileDto struct {
-	Id     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	ID     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
 	UserID bson.ObjectId `bson:"user_id" json:"user_id"`
 
 	Name              string         `bson:"freelancer_name" json:"freelancer_name"`
@@ -62,6 +65,7 @@ type ProfileDto struct {
 	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
 }
 
+// ProfileSearchDto profile search dto
 type ProfileSearchDto struct {
 	SerialNumber   int    `json:"serial_number"`
 	HoursBilled    int    `json:"hours_billed"`
@@ -70,6 +74,6 @@ type ProfileSearchDto struct {
 	LastActivity   int    `json:"last_activity"`
 	FreelancerType int    `json:"freelancer_type"`
 	HourlyRate     int    `json:"hourly_rate"`
-	RegionId       int    `json:"region_id"`
+	RegionID       int    `json:"region_iD"`
 	SearchKey      string `json:"search_key"`
 }

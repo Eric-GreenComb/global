@@ -5,14 +5,15 @@ import (
 	"time"
 )
 
+// Contact user-client contact
 type Contact struct {
-	Id              bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	ClientEmail     string        `bson:"client_email" json:"client_email"`
-	FreeLancerEmail string        `bson:"freelancer_email" json:"freelancer_email"`
+	ID              bson.ObjectId `bson:"_id,omitempty" json:"_id"`
+	ClientEmail     string        `form:"client_email" bson:"client_email" json:"client_email"`
+	FreeLancerEmail string        `form:"freelancer_email" bson:"freelancer_email" json:"freelancer_email"`
 
 	ContactContent string `bson:"contact_content" json:"contact_content"`
-	ContactTpl     string `bson:"contact_tpl" json:"contact_tpl"`
-	TplParam       string `bson:"tpl_param" json:"tpl_param"`
+	ContactTpl     string `form:"contact_tpl" bson:"contact_tpl" json:"contact_tpl"`
+	TplParam       string `form:"tpl_param" bson:"tpl_param" json:"tpl_param"`
 
 	ClientSignup        bool   `bson:"client_signup" json:"client_signup"`
 	ClientSignature     string `bson:"client_signature" json:"client_signature"`

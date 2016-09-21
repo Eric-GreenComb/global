@@ -2,6 +2,7 @@ package bean
 
 import ()
 
+// Email email struct
 type Email struct {
 	Host     string `json:"host"`
 	User     string `json:"user"`
@@ -12,6 +13,7 @@ type Email struct {
 	Mailtype string `json:"type"`
 }
 
+// EmailExtra email extra struct
 type EmailExtra struct {
 	Email    Email             `json:"email"`
 	TempName string            `json:"tempname"`

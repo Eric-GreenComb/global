@@ -2,6 +2,7 @@ package bean
 
 import ()
 
+// ProfileSearchCondition user's profile search struct
 type ProfileSearchCondition struct {
 	// select key     -1 is all
 	SerialNumber   int `json:"serial_number"`   // /global/bean/category.go Category/SubCategory SerialNumber
