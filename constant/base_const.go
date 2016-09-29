@@ -44,8 +44,3 @@ const (
 	RegionXiangGang = 81 //香港特别行政区
 	RegionAoMen     = 82 //澳门特别行政区
 )
-
-const (
-	// BanerwaiInvitedDefaultUserID banerwai default userID
-	BanerwaiInvitedDefaultUserID = "5707cb10ae6faa1d1071a189"
-)
