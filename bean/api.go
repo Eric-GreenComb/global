@@ -27,11 +27,10 @@ type APIRequestHeader struct {
 // Params : form params map
 // SortKeys : map sort keys
 type APIRequestPayload struct {
-	Iss      string            `json:"iss,omitempty"`
-	Iat      int64             `json:"iat,omitempty"`
-	Aud      string            `json:"aud,omitempty"`
-	Params   map[string]string `json:"params,omitempty"`
-	SortKeys []string          `json:"sort,omitempty"`
+	Iss    string            `json:"iss,omitempty"`
+	Iat    int64             `json:"iat,omitempty"`
+	Aud    string            `json:"aud,omitempty"`
+	Params map[string]string `json:"params,omitempty"`
 }
 
 // APIRequestSignature API request signature
