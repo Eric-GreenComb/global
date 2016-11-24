@@ -2,7 +2,6 @@ package bean
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"time"
 )
 
 // 随机token
@@ -27,5 +26,5 @@ type Token struct {
 	Key         string        `bson:"key" json:"key"`
 	Token       string        `bson:"token" json:"token"`
 	Type        int64         `bson:"type" json:"type"`
-	CreatedTime time.Time     `bson:"createdtime" json:"cteatetime"`
+	CreatedTime int64         `bson:"createdtime" json:"cteatetime"`
 }

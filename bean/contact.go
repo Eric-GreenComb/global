@@ -2,7 +2,6 @@ package bean
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"time"
 )
 
 // Contact user-client contact
@@ -21,6 +20,6 @@ type Contact struct {
 	FreelancerSignature string `bson:"freelancer_signature" json:"freelancer_signature"`
 	Dealed              bool   `bson:"dealed" json:"dealed"`
 
-	DealedTime  time.Time `bson:"dealedtime" json:"dealedtime"`
-	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
+	DealedTime  int64 `bson:"dealedtime" json:"dealedtime"`
+	CreatedTime int64 `bson:"createdtime" json:"createdtime"`
 }

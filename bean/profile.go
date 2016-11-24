@@ -2,7 +2,6 @@ package bean
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"time"
 )
 
 // Profile user profile
@@ -34,9 +33,9 @@ type Profile struct {
 	AgencyHourlyRates string         `bson:"agency_hourly_rates" json:"agency_hourly_rates"`
 	AgencyMembers     []AgencyMember `bson:"agency_members" json:"agency_members"`
 
-	Status         bool      `bson:"status" json:"status"`
-	CreatedTime    time.Time `bson:"createdtime" json:"createdtime"`
-	LastActiveTime time.Time `bson:"last_activetime" json:"last_activetime"`
+	Status         bool  `bson:"status" json:"status"`
+	CreatedTime    int64 `bson:"createdtime" json:"createdtime"`
+	LastActiveTime int64 `bson:"last_activetime" json:"last_activetime"`
 }
 
 // AgencyMember if user as a client ,client's member
@@ -62,7 +61,7 @@ type ProfileDto struct {
 	AgencyHourlyRates string         `bson:"agency_hourly_rates" json:"agency_hourly_rates"`
 	AgencyMembers     []AgencyMember `bson:"agency_members" json:"agency_members"`
 
-	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
+	CreatedTime int64 `bson:"createdtime" json:"createdtime"`
 }
 
 // ProfileSearchDto profile search dto

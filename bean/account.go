@@ -2,7 +2,6 @@ package bean
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"time"
 )
 
 // Account account struct
@@ -13,7 +12,7 @@ type Account struct {
 
 	MultiCurrency []MultiCurrencyAccount `bson:"multi_curreency" json:"multi_curreency"`
 
-	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
+	CreatedTime int64 `bson:"createdtime" json:"createdtime"`
 }
 
 // MultiCurrencyAccount multi currency of account
@@ -40,6 +39,6 @@ type Billing struct {
 	PlatformFee int64  `bson:"platform_fee" json:"platform_fee"`
 	RealAmount  int64  `bson:"real_amount" json:"real_amount"`
 
-	Status      int       `bson:"status" json:"status"`
-	CreatedTime time.Time `bson:"createdtime" json:"createdtime"`
+	Status      int   `bson:"status" json:"status"`
+	CreatedTime int64 `bson:"createdtime" json:"createdtime"`
 }

@@ -2,7 +2,6 @@ package bean
 
 import (
 	"gopkg.in/mgo.v2/bson"
-	"time"
 )
 
 // User user struct
@@ -12,7 +11,7 @@ type User struct {
 	Email       string        `form:"email" bson:"email" json:"email"`       // 全是小写
 	Pwd         string        `form:"pwd" bson:"pwd" json:"-"`
 	Actived     bool          `bson:"actived" json:"actived"`
-	CreatedTime time.Time     `bson:"createdtime" json:"createdtime"`
+	CreatedTime int64         `bson:"createdtime" json:"createdtime"`
 }
 
 // UserDto user readonly struct
