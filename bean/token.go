@@ -13,11 +13,11 @@ const (
 	TokenUpdateEmail
 )
 
-// 过期时间
+// 过期时间 hour
 const (
-	PwdOverHours         = 2.0
-	ActiveEmailOverHours = 48.0
-	UpdateEmailOverHours = 2.0
+	PwdOverHours         = 2 * 60 * 60
+	ActiveEmailOverHours = 48 * 60 * 60
+	UpdateEmailOverHours = 2 * 60 * 60
 )
 
 // Token token struct
