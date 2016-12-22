@@ -7,21 +7,21 @@ import (
 // WorkHistory user work history on banerwai
 type WorkHistory struct {
 	ID        bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	ProfileID bson.ObjectId `bson:"profile_id" json:"profile_id"`
+	ProfileID bson.ObjectId `bson:"profileID" json:"profileID"`
 
-	HistoryAndFeedbacks []WorkHistoryAndFeedback `bson:"history_feedbacks" json:"history_feedbacks"`
+	HistoryAndFeedbacks []WorkHistoryAndFeedback `bson:"historyFeedbacks" json:"historyFeedbacks"`
 }
 
 // WorkHistoryAndFeedback user work history / feedback
 type WorkHistoryAndFeedback struct {
 	Title      string `bson:"title" json:"title"`
-	WorkPeriod string `bson:"work_period" json:"work_period"`
+	WorkPeriod string `bson:"workPeriod" json:"workPeriod"`
 
-	WorkType   string `bson:"work_type" json:"work_type"` // Fixed Price or $27.78 / hr
-	WorkEarned string `bson:"work_earned" json:"work_earned"`
-	WorkHours  int    `bson:"work_hours" json:"work_hours"`
+	WorkType   string `bson:"workType" json:"workType"` // Fixed Price or $27.78 / hr
+	WorkEarned string `bson:"workEarned" json:"workEarned"`
+	WorkHours  int    `bson:"workHours" json:"workHours"`
 
-	WorkFeedbacks []WorkFeedback `bson:"work_feedbacks" json:"work_feedbacks"`
+	WorkFeedbacks []WorkFeedback `bson:"workFeedbacks" json:"workFeedbacks"`
 }
 
 // WorkFeedback user work feedback

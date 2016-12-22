@@ -7,19 +7,19 @@ import (
 // Contact user-client contact
 type Contact struct {
 	ID              bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	ClientEmail     string        `form:"client_email" bson:"client_email" json:"client_email"`
-	FreeLancerEmail string        `form:"freelancer_email" bson:"freelancer_email" json:"freelancer_email"`
+	ClientEmail     string        `form:"clientEmail" bson:"clientEmail" json:"clientEmail"`
+	FreeLancerEmail string        `form:"freelancerEmail" bson:"freelancerEmail" json:"freelancerEmail"`
 
-	ContactContent string `bson:"contact_content" json:"contact_content"`
-	ContactTpl     string `form:"contact_tpl" bson:"contact_tpl" json:"contact_tpl"`
-	TplParam       string `form:"tpl_param" bson:"tpl_param" json:"tpl_param"`
+	ContactContent string `bson:"contactContent" json:"contactContent"`
+	ContactTpl     string `form:"contactTpl" bson:"contactTpl" json:"contactTpl"`
+	TplParam       string `form:"tplParam" bson:"tplParam" json:"tplParam"`
 
-	ClientSignup        bool   `bson:"client_signup" json:"client_signup"`
-	ClientSignature     string `bson:"client_signature" json:"client_signature"`
-	FreelancerSignup    bool   `bson:"freelancer_signup" json:"freelancer_signup"`
-	FreelancerSignature string `bson:"freelancer_signature" json:"freelancer_signature"`
+	ClientSignup        bool   `bson:"clientSignup" json:"clientSignup"`
+	ClientSignature     string `bson:"clientSignature" json:"clientSignature"`
+	FreelancerSignup    bool   `bson:"freelancerSignup" json:"freelancerSignup"`
+	FreelancerSignature string `bson:"freelancerSignature" json:"freelancerSignature"`
 	Dealed              bool   `bson:"dealed" json:"dealed"`
 
-	DealedTime  int64 `bson:"dealedtime" json:"dealedtime"`
-	CreatedTime int64 `bson:"createdtime" json:"createdtime"`
+	DealedTime  int64 `bson:"dealTime" json:"dealTime"`
+	CreatedTime int64 `bson:"createTime" json:"createTime"`
 }

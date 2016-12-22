@@ -5,14 +5,14 @@ import ()
 // ProfileSearchCondition user's profile search struct
 type ProfileSearchCondition struct {
 	// select key     -1 is all
-	SerialNumber   int `json:"serial_number"`   // /global/bean/category.go Category/SubCategory SerialNumber
-	HoursBilled    int `json:"hours_billed"`    // /gather/global/business_const.go : Hours Billed
-	AvailableHours int `json:"available_hours"` // /gather/global/business_const.go : Available Hours
-	JobSuccess     int `json:"job_success"`     // /gather/global/business_const.go : Job Success
-	LastActivity   int `json:"last_activity"`   // /gather/global/business_const.go : Last Activity
-	FreelancerType int `json:"freelancer_type"` // /gather/global/business_const.go : Freelancer Type
-	HourlyRate     int `json:"hourly_rate"`     // /gather/global/business_const.go : Hours Rate
-	RegionID       int `json:"region_id"`       // /gather/global/base_const.go : Region ID
+	SerialNumber   int `json:"serialNumber"`   // /global/bean/category.go Category/SubCategory SerialNumber
+	HoursBilled    int `json:"hoursBilled"`    // /gather/global/business_const.go : Hours Billed
+	AvailableHours int `json:"availableHours"` // /gather/global/business_const.go : Available Hours
+	JobSuccess     int `json:"jobSuccess"`     // /gather/global/business_const.go : Job Success
+	LastActivity   int `json:"lastActivity"`   // /gather/global/business_const.go : Last Activity
+	FreelancerType int `json:"freelancerType"` // /gather/global/business_const.go : Freelancer Type
+	HourlyRate     int `json:"hourlyRate"`     // /gather/global/business_const.go : Hours Rate
+	RegionID       int `json:"regionID"`       // /gather/global/base_const.go : Region ID
 
-	SearchKey string `json:"search_key"` // searchkey
+	SearchKey string `json:"searchKey"` // searchkey
 }

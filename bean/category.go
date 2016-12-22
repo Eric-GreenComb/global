@@ -5,7 +5,7 @@ import ()
 // Category profile category
 type Category struct {
 	ID            string        `json:"id"`
-	SerialNumber  int32         `json:"serialnumber"`
+	SerialNumber  int32         `json:"serialNumber"`
 	Name          string        `json:"name"`
 	Desc          string        `json:"desc"`
 	Fa            string        `json:"fa"`
@@ -16,7 +16,7 @@ type Category struct {
 // SubCategory profile subcategory
 type SubCategory struct {
 	ID           string `json:"id"`
-	SerialNumber int32  `json:"serialnumber"`
+	SerialNumber int32  `json:"serialNumber"`
 	Name         string `json:"name"`
 	Desc         string `json:"desc"`
 }

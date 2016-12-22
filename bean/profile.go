@@ -7,41 +7,41 @@ import (
 // Profile user profile
 type Profile struct {
 	ID     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	UserID bson.ObjectId `bson:"user_id" json:"user_id"`
+	UserID bson.ObjectId `bson:"userID" json:"userID"`
 
 	// select key     -1 is all
-	CategoryNumber int `bson:"category_number" json:"category_number"` // /global/bean/category.go Category/SubCategory SerialNumber
-	SerialNumber   int `bson:"serial_number" json:"serial_number"`     // /global/bean/category.go Category/SubCategory SerialNumber
+	CategoryNumber int `bson:"categoryNumber" json:"categoryNumber"` // /global/bean/category.go Category/SubCategory SerialNumber
+	SerialNumber   int `bson:"serialNumber" json:"serialNumber"`     // /global/bean/category.go Category/SubCategory SerialNumber
 
-	HoursBilled     int `bson:"hours_billed" json:"hours_billed"`         // /global/business_const.go : Hours Billed
-	AvailableHours  int `bson:"available_hours" json:"available_hours"`   // /global/business_const.go : Available Hours
-	JobSuccess      int `bson:"job_success" json:"job_success"`           // /global/business_const.go : Job Success
-	LastActivity    int `bson:"last_activity" json:"last_activity"`       // /global/business_const.go : Last Activity
-	FreelancerType  int `bson:"freelancer_type" json:"freelancer_type"`   // /global/business_const.go : Freelancer Type
-	HourlyRate      int `bson:"hourly_rate" json:"hourly_rate"`           // /global/business_const.go : Hours Rate
-	RegionID        int `bson:"region_id" json:"region_id"`               // /global/base_const.go : Region ID
-	ExperienceLevel int `bson:"experience_level" json:"experience_level"` // /global/business_const.go : Skill Experience Level
+	HoursBilled     int `bson:"hourBilled" json:"hourBilled"`           // /global/business_const.go : Hours Billed
+	AvailableHours  int `bson:"availableHours" json:"availableHours"`   // /global/business_const.go : Available Hours
+	JobSuccess      int `bson:"jobSuccess" json:"jobSuccess"`           // /global/business_const.go : Job Success
+	LastActivity    int `bson:"lastActivity" json:"lastActivity"`       // /global/business_const.go : Last Activity
+	FreelancerType  int `bson:"freelancerType" json:"freelancerType"`   // /global/business_const.go : Freelancer Type
+	HourlyRate      int `bson:"hourlyRate" json:"hourlyRate"`           // /global/business_const.go : Hours Rate
+	RegionID        int `bson:"regionID" json:"regionID"`               // /global/base_const.go : Region ID
+	ExperienceLevel int `bson:"experienceLevel" json:"experienceLevel"` // /global/business_const.go : Skill Experience Level
 
 	// show
-	Name              string         `bson:"freelancer_name" json:"freelancer_name"`
-	JobTitle          string         `bson:"job_title" json:"job_title"`
+	Name              string         `bson:"freelancerName" json:"freelancerName"`
+	JobTitle          string         `bson:"jobTitle" json:"jobTitle"`
 	Overview          string         `bson:"overview" json:"overview"` // searchkey
-	HourRate          int            `bson:"hour_rate" json:"hour_rate"`
-	WorkHours         int            `bson:"work_hours" json:"work_hours"`
-	PortfolioNums     int            `bson:"portfolio_nums" json:"portfolio_nums"`
-	SkillTags         string         `bson:"skill_tags" json:"skill_tags"`
-	AgencyHourlyRates string         `bson:"agency_hourly_rates" json:"agency_hourly_rates"`
-	AgencyMembers     []AgencyMember `bson:"agency_members" json:"agency_members"`
+	HourRate          int            `bson:"hourRate" json:"hourRate"`
+	WorkHours         int            `bson:"workHours" json:"workHours"`
+	PortfolioNums     int            `bson:"portfolioNums" json:"portfolioNums"`
+	SkillTags         string         `bson:"skillTags" json:"skillTags"`
+	AgencyHourlyRates string         `bson:"agencyHourlyRates" json:"agencyHourlyRates"`
+	AgencyMembers     []AgencyMember `bson:"agencyMembers" json:"agencyMembers"`
 
 	Status         bool  `bson:"status" json:"status"`
-	CreatedTime    int64 `bson:"createdtime" json:"createdtime"`
-	LastActiveTime int64 `bson:"last_activetime" json:"last_activetime"`
+	CreatedTime    int64 `bson:"createTime" json:"createTime"`
+	LastActiveTime int64 `bson:"lastActiveTime" json:"lastActiveTime"`
 }
 
 // AgencyMember if user as a client ,client's member
 type AgencyMember struct {
-	Names     string `bson:"profile_name" json:"profile_name"`
-	JobTitles string `bson:"profile_jobtitle" json:"profile_jobtitle"`
+	Names     string `bson:"profileName" json:"profileName"`
+	JobTitles string `bson:"profileJobTitle" json:"profileJobTitle"`
 	Manager   bool   `bson:"manager" json:"manager"`
 	Email     string `bson:"email" json:"email"`
 	Phone     string `bson:"phone" json:"phone"`
@@ -50,29 +50,29 @@ type AgencyMember struct {
 // ProfileDto profile read struct
 type ProfileDto struct {
 	ID     bson.ObjectId `bson:"_id,omitempty" json:"_id"`
-	UserID bson.ObjectId `bson:"user_id" json:"user_id"`
+	UserID bson.ObjectId `bson:"userID" json:"userID"`
 
-	Name              string         `bson:"freelancer_name" json:"freelancer_name"`
-	JobTitle          string         `bson:"job_title" json:"job_title"`
+	Name              string         `bson:"freelancerName" json:"freelancerName"`
+	JobTitle          string         `bson:"jobTitle" json:"jobTitle"`
 	Overview          string         `bson:"overview" json:"overview"` // searchkey
-	WorkHours         int            `bson:"work_hours" json:"work_hours"`
-	PortfolioNums     int            `bson:"portfolio_nums" json:"portfolio_nums"`
-	SkillTags         string         `bson:"skill_tags" json:"skill_tags"`
-	AgencyHourlyRates string         `bson:"agency_hourly_rates" json:"agency_hourly_rates"`
-	AgencyMembers     []AgencyMember `bson:"agency_members" json:"agency_members"`
+	WorkHours         int            `bson:"workHours" json:"workHours"`
+	PortfolioNums     int            `bson:"portfolioNums" json:"portfolioNums"`
+	SkillTags         string         `bson:"skillTags" json:"skillTags"`
+	AgencyHourlyRates string         `bson:"agencyHourlyRates" json:"agencyHourlyRates"`
+	AgencyMembers     []AgencyMember `bson:"agencyMembers" json:"agencyMembers"`
 
-	CreatedTime int64 `bson:"createdtime" json:"createdtime"`
+	CreatedTime int64 `bson:"createTime" json:"createTime"`
 }
 
 // ProfileSearchDto profile search dto
 type ProfileSearchDto struct {
-	SerialNumber   int    `json:"serial_number"`
-	HoursBilled    int    `json:"hours_billed"`
-	AvailableHours int    `json:"available_hours"`
-	JobSuccess     int    `json:"job_success"`
-	LastActivity   int    `json:"last_activity"`
-	FreelancerType int    `json:"freelancer_type"`
-	HourlyRate     int    `json:"hourly_rate"`
-	RegionID       int    `json:"region_iD"`
-	SearchKey      string `json:"search_key"`
+	SerialNumber   int    `json:"serialNumber"`
+	HoursBilled    int    `json:"hoursBilled"`
+	AvailableHours int    `json:"availableHours"`
+	JobSuccess     int    `json:"jobSuccess"`
+	LastActivity   int    `json:"lastAtivity"`
+	FreelancerType int    `json:"freelancerType"`
+	HourlyRate     int    `json:"hourlyRate"`
+	RegionID       int    `json:"regionID"`
+	SearchKey      string `json:"searchKey"`
 }

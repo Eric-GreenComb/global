@@ -16,6 +16,6 @@ type Email struct {
 // EmailExtra email extra struct
 type EmailExtra struct {
 	Email    Email             `json:"email"`
-	TempName string            `json:"tempname"`
+	TempName string            `json:"tempName"`
 	Parse    map[string]string `json:"parse"`
 }
